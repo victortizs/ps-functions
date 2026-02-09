@@ -1,5 +1,5 @@
 # PS Functions
-My own code snippets for daily repetitive tasks, written in PowerShell.
+My own code snippets for daily repetitive tasks, written in **PowerShell.**
 
 Inside the folder 'snippets' you'll find functions save as PowerShell scripts (.ps1), but I strongly recommend to follow Microsoft's guidelines on this matter:
 1. Create a module container (directory) in the available spaces suggested by Powershell—you can see these running `$env:PSModulePath -Split ";"`. Here you must select the module path that best suits your needs, each one has a different scope/range of action, such as system wide or current user—[read the doc](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_psmodulepath?view=powershell-7.4).
