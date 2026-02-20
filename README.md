@@ -9,7 +9,7 @@ If you don't know if those directories are already created, then you can try som
 if (Test-Path C:\Users\uruserhere\Documents\PowerShell\Modules) {Write-Host "all good"}
 else {New-Item -Path C:\Users\uruserhere\Documents\PowerShell\Modules -ItemType Directory}
 ```
-Then proceed to create the module container inside.
+Now proceed to create the module container inside.
   
 2. Create a module file (.psm1) in the container and with the same name, this allows PowerShell to automatically recognize the module and import it (along with functions inside) in each session. No need for `Get-Module`, `Import-Module` or dot sourcing (`. .\function-name.ps1`).
 3. Aggregate functions or any command combination to your module in your preferred editor (PowerShell ISE, Visual Studio or VSCode).
