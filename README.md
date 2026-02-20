@@ -7,11 +7,11 @@ Inside the folder 'snippets' you'll find functions save as PowerShell scripts (.
 If you don't know if those directories are already created, use the code below—example for current user scope—, then create a module container inside.
 ```powershell
 # Test if the module path for the current user scope exists
-if (Test-Path -Path $HOME\Documents\PowerShell\Modules) {Write-Host "it exists"} # $HOME is an automatic (predefined) variable that replaces "C:\Users\your-user-name"
+if (Test-Path -Path $HOME\Documents\PowerShell\Modules) {Write-Host "it exists"} # $HOME is an automatic—predefined—variable that replaces "C:\Users\your-user-name"
 else {Write-Host "it does not exist, you need to create it"}
 
 # Create the container. Remember that your module's name must match the name you choose for its container
-New-Item -Path $HOME\Documents\PowerShell\Modules\Your-Container-Name -ItemType Directory # This will create the module path if it doesn't exist at the same time that it creates the container
+New-Item -Path $HOME\Documents\PowerShell\Modules\your-container-name -ItemType Directory # This will create the module path if it doesn't exist at the same time that it creates the container
 ```  
 2. Now, within the container, create a module file (.psm1) with the same name to allow PowerShell to automatically recognize the module and import it (along with functions inside) in each session. No need for `Get-Module`, `Import-Module` or dot sourcing scripts (`. "path-to\function-name.ps1"`).
 3. Aggregate functions or any command combination to your module in your preferred editor (PowerShell ISE, Visual Studio or VSCode).
