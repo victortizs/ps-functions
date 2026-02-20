@@ -13,10 +13,10 @@ Then create the module container inside.
   
 2. Now, within the container, create a module file (.psm1) with the same name to allow PowerShell to automatically recognize the module and import it (along with functions inside) in each session. No need for `Get-Module`, `Import-Module` or dot sourcing scripts (`. "path-to\function-name.ps1"`).
 3. Aggregate functions or any command combination to your module in your preferred editor (PowerShell ISE, Visual Studio or VSCode).
-4. Create a module manifest (.psd1) to add helpful content about the module (author, company, description, version, etc.) and select specific functions that you want PowerShell to import. Do it with the same name as the module container and module file.
+4. Next to your module file, in the same container, create a module manifest (.psd1) to add helpful content about the module (author, company, description, version, etc.) and select specific functions that you want PowerShell to import. Do it with the same name as the module container and module file.
 5. Create a module repository to upload/publish module files and make them accessible for everyone who want to use them (by installing them)—you can host your own repo locally or choose a web server such as [Powershell Gallery](https://www.powershellgallery.com/).
 
-Personally, I stopped on step 4 because I don't intend to publish any module on any server, but I might someday do step 5, to use it on another machine.
+Personally, I stopped on step 4 because I don't intend to publish any module on any server, but I might someday.
 
 ### Helpful resources:
 - https://adamtheautomator.com/powershell-modules/#Installing_Modules
