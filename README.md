@@ -16,7 +16,7 @@ Then create the module container inside.
 4. Create a module manifest (.psd1) to add helpful content about the module (author, company, description, version, etc.) and select specific functions that you want PowerShell to import. Do it with the same name as the module container and module file.
 5. Create a module repository to upload/publish module files and make them accessible for everyone who want to use them (by installing them)—you can host your own repo locally or choose a web server such as [Powershell Gallery](https://www.powershellgallery.com/).
 
-Personally, I stopped on step 4 because I don't intend to publish any module on any server, but I might someday to use it on another machine.
+Personally, I stopped on step 4 because I don't intend to publish any module on any server, but I might someday do step 5, to use it on another machine.
 
 ### Helpful resources:
 - https://adamtheautomator.com/powershell-modules/#Installing_Modules
