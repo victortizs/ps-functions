@@ -7,7 +7,7 @@ Inside the folder 'snippets' you'll find functions save as PowerShell scripts (.
 If you don't know if those directories are already created try something like (using path for current user scope):
 ```powershell
 if (Test-Path C:\Users\your-user-here\Documents\PowerShell\Modules) {Write-Host "all good"}
-else {New-Item -Path C:\Users\uruserhere\Documents\PowerShell\Modules -ItemType Directory}
+else {New-Item -Path C:\Users\your-user-here\Documents\PowerShell\Modules -ItemType Directory}
 ```
 Then create the module container inside.
   
