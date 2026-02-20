@@ -9,6 +9,7 @@ If you don't know if those directories are already created, use the code belowâ€
 if (Test-Path -Path C:\Users\your-user-here\Documents\PowerShell\Modules) {
 Write-Host "The module path for the current user scope already exists"
 } else {Write-Host "You need to create the module path for the current user scope"}
+
 New-Item -Path C:\Users\your-user-here\Documents\PowerShell\Modules\Your-Container-Name -ItemType Directory # This will create the module path if it doesn't exist at the same time that it creates your module container. Remember that your module name will match the name you choose for its container
 ```  
 2. Now, within the container, create a module file (.psm1) with the same name to allow PowerShell to automatically recognize the module and import it (along with functions inside) in each session. No need for `Get-Module`, `Import-Module` or dot sourcing scripts (`. "path-to\function-name.ps1"`).
