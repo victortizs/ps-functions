@@ -4,13 +4,11 @@ Code snippets for daily repetitive tasks, written in **PowerShell.**
 
 Inside the folder 'snippets' you'll find functions save as PowerShell scripts (.ps1), but I strongly recommend to follow Microsoft's guidelines on this matter:
 1. Create a module container (directory) in the available spaces suggested by Powershell—you can see these running `$env:PSModulePath -Split ";"`. Here you must select the module path that best suits your needs, each one has a different scope/range of action, such as system wide or current user—[read the doc](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_psmodulepath?view=powershell-7.4).
-If you don't know if those directories are already created try something like (using path for current user scope):
+If you don't know if those directories are already created try something like the code below (example for current user scope). Then create the module container inside.
 ```powershell
 if (Test-Path -Path C:\Users\your-user-here\Documents\PowerShell\Modules) {Write-Host "all good"}
 else {New-Item -Path C:\Users\your-user-here\Documents\PowerShell\Modules -ItemType Directory}
-```
-Then create the module container inside.
-  
+```  
 2. Now, within the container, create a module file (.psm1) with the same name to allow PowerShell to automatically recognize the module and import it (along with functions inside) in each session. No need for `Get-Module`, `Import-Module` or dot sourcing scripts (`. "path-to\function-name.ps1"`).
 3. Aggregate functions or any command combination to your module in your preferred editor (PowerShell ISE, Visual Studio or VSCode).
 4. Next to your module file, in the same container, create a module manifest (.psd1) to add helpful content about the module (author, company, description, version, etc.) and select specific functions that you want PowerShell to import. Do it with the same name as the module container and module file.
