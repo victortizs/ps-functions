@@ -7,8 +7,8 @@ Inside the folder 'snippets' you'll find functions save as PowerShell scripts (.
 If you don't know if those directories are already created, use the code below—example for current user scope—, then create a module container inside.
 ```powershell
 # Test if the module path for the current user scope exists
-if (Test-Path -Path C:\Users\your-user-here\Documents\PowerShell\Modules) {Write-Host "it exists"}
-else {Write-Host "you need to create the module path for the current user scope"}
+if (Test-Path -Path C:\Users\your-user-here\Documents\PowerShell\Modules) {Write-Host "It exists"}
+else {Write-Host "You need to create the module path for the current user scope"}
 
 # Create the container. Remember that your module name must match the name you choose for its container
 New-Item -Path C:\Users\your-user-here\Documents\PowerShell\Modules\Your-Container-Name -ItemType Directory # This will create the module path if it doesn't exist at the same time that it creates the container
