@@ -6,8 +6,10 @@ Inside the folder 'snippets' you'll find functions save as PowerShell scripts (.
 1. Create a module container (directory) in the available spaces suggested by Powershell—you can see these running `$env:PSModulePath -Split ";"`. Here you must select the module path that best suits your needs, each one has a different scope/range of action, such as system wide or current user—[read the doc](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_psmodulepath?view=powershell-7.4).
 If you don't know if those directories are already created, use the code below—example for current user scope—, then create a module container inside.
 ```powershell
-if (Test-Path -Path C:\Users\your-user-here\Documents\PowerShell\Modules) {Write-Host "all good"}
-else {New-Item -Path C:\Users\your-user-here\Documents\PowerShell\Modules -ItemType Directory}
+if (Test-Path -Path C:\Users\your-user-here\Documents\PowerShell\Modules) {
+Write-Host "The module path for the current user scope already exists"
+} else {Write-Host "You need to create the module path for the current user scope"}
+New-Item -Path C:\Users\your-user-here\Documents\PowerShell\Modules\Your-Container-Name -ItemType Directory # This will create the module path if it doesn't exist at the same time that it creates your module container. Remember that your module name will match the name you choose for its container
 ```  
 2. Now, within the container, create a module file (.psm1) with the same name to allow PowerShell to automatically recognize the module and import it (along with functions inside) in each session. No need for `Get-Module`, `Import-Module` or dot sourcing scripts (`. "path-to\function-name.ps1"`).
 3. Aggregate functions or any command combination to your module in your preferred editor (PowerShell ISE, Visual Studio or VSCode).
