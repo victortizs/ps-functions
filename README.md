@@ -1,7 +1,7 @@
 # PS Functions
 
 Inside the folder 'snippets' you'll find functions save as PowerShell scripts (.ps1), but I strongly recommend to follow Microsoft's guidelines on this matter:
-1. Create a module container (a folder) in the available spaces suggested by Powershell—you can see them running `$env:PSModulePath -split ";"`—you must select the module path that best suits your needs, each one has a different scope/range of action, such as system wide or current user—[read the doc](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_psmodulepath?view=powershell-7.4).
+1. Create a module container (a folder) in the available spaces suggested by PowerShell—you can see them running `$env:PSModulePath -split ";"`—you must select the module path that best suits your needs, each one has a different scope/range of action, such as system wide or current user—[read the doc](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_psmodulepath?view=powershell-7.4).
 If you don't know if those directories are already created, use the code below as an example for the current user scope:
 ```powershell
 # Test if the module path for the current user scope exists
